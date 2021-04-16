@@ -1,6 +1,0 @@
-"0","```r
-soyk<- read_excel(\"../data/SoybeanWorkshop.xlsx\", sheet=\"R\")
-
-# Checking first rows
-soyk
-```"

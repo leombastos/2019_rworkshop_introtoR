@@ -1,5 +1,0 @@
-"0","soyk_5<- separate(soyk_4, "
-"0","                  Location.K, "
-"0","                  into = c(""Location"",""Kname""))"
-"0",""
-"0","soyk_5"

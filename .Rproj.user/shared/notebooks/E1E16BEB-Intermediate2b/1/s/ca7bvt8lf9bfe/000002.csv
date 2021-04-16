@@ -1,7 +1,0 @@
-"0","```r
-# Changing type of matrix restriction
-options(contrasts = c(\"contr.sum\", \"contr.poly\"))
-
-# Running model
-
-```"

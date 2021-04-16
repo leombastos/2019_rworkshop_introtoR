@@ -1,2 +1,0 @@
-"0","ggplot(soyk_w, aes(x=factor(Krate_kgha), y=K_pct))+"
-"0","  geom_boxplot(aes(fill=Location))"

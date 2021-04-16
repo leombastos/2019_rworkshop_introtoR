@@ -1,6 +1,0 @@
-"0","# Augmenting"
-"0","soyk_mod_aug<-augment(soyk_mod)"
-"0",""
-"0","# Adding Pearson's standardized residual"
-"0","soyk_mod_aug$.stdresid<- resid(soyk_mod, type=""pearson"", scaled=T)"
-"0",""

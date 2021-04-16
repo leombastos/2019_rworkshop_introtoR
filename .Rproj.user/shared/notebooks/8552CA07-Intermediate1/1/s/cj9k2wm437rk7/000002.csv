@@ -1,6 +1,0 @@
-"0","# Transforming K rate from lbs/ac to kg/ha"
-"0","soyk_2<- mutate(soyk, "
-"0","              Krate_kgha=Krate_lbac*0.453592/0.404686,"
-"0","              Krate_kgha=round(Krate_kgha,0))"
-"0",""
-"0","soyk_2"

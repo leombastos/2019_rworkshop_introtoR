@@ -1,0 +1,5 @@
+"0","ggplot(soyk_mod_aug, aes(x=.fitted, y=.stdresid))+"
+"0","  geom_point(aes(color=Location))+"
+"0","  geom_hline(yintercept = c(-3,0,3), color=""orange"")+"
+"0","  geom_smooth()"
+"0",""

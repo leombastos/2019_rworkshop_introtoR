@@ -1,0 +1,6 @@
+"0","randeff_Rep_A1<- ranef(soyk_reg_S1)[[1]]"
+"0",""
+"0","ggplot(randeff_Rep_A1, aes(sample=`(Intercept)`))+"
+"0","  stat_qq()+"
+"0","  stat_qq_line()"
+"0",""

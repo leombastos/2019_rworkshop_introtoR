@@ -1,0 +1,144 @@
+---
+title: "KSU Agronomy R Workshop - Intermediate 1 Agenda"
+output: html_notebook
+---
+
+# 1) Setup  
+
+```{r Setup, warning=F}
+# Loading packages (everytime you open R)
+library(tidyverse)
+library(readxl)
+library(openxlsx)
+
+```
+
+
+```{r Reading data}
+soyk<- read_excel("../data/SoybeanWorkshop.xlsx", sheet="R")
+
+# Checking first rows
+soyk
+
+# View
+```
+
+This study was conducted at four different locations in one year to assess the effect of potassium (K) fertilizer rates on soybean trifoliate K concentration at R4.  
+
+Each study was a randomized complete block design (RCBD) with K rate as the only treatment factor with levels 0, 50, 100, and 150 lbs K20/ac.
+
+```{r Glimpse}
+glimpse(soyk)
+```
+
+```{r Summary}
+summary(soyk)
+```
+
+# 2) Data wrangling
+```{r filter()}
+soyk_1 <- filter(soyk, 
+                 Krate_lbac==0)
+
+soyk_1
+```
+
+
+
+```{r mutate()}
+# Transforming K rate from lbs/ac to kg/ha
+soyk_2<- mutate(soyk, 
+              Krate_kgha=Krate_lbac*0.453592/0.404686,
+              Krate_kgha=round(Krate_kgha,0))
+
+soyk_2
+```
+
+```{r case_when()}
+soyk_3<- mutate(soyk_2,
+                Rep=case_when(
+                  Plot > 100 & Plot < 200 ~ 1,
+                  Plot > 200 & Plot < 300 ~ 2,
+                  Plot > 300 & Plot < 400 ~ 3,
+                  Plot > 400 ~ 4,
+                ))
+soyk_3
+```
+
+```{r gather()}
+soyk_4<- gather(soyk_3,
+                Location.K, K_pct, 
+                A1.Kpct, O2.Kpct, S1.Kpct, W1.Kpct)
+
+soyk_4
+```
+
+```{r separate()}
+soyk_5<- separate(soyk_4, 
+                  Location.K, 
+                  into = c("Location","Kname"))
+
+soyk_5
+```
+
+```{r select()}
+soyk_6 <- dplyr::select(soyk_5, 
+                 Location, Rep, Krate_kgha, K_pct)
+
+soyk_6
+```
+
+```{r group_by and summarise}
+# group_by
+soyk_7<- group_by(soyk_6,
+                  Location)
+
+class(soyk_6)
+
+class(soyk_7)
+
+# summarise
+soyk_8<- summarise(soyk_7,
+                   meanK_pct=mean(K_pct))
+
+soyk_8
+```
+
+```{r Piping it all together}
+soyk_w<- soyk %>%
+  mutate(Krate_kgha=Krate_lbac*0.453592/0.404686,
+              Krate_kgha=round(Krate_kgha,0)) %>%
+  mutate(Rep=case_when(
+                  Plot > 100 & Plot < 200 ~ 1,
+                  Plot > 200 & Plot < 300 ~ 2,
+                  Plot > 300 & Plot < 400 ~ 3,
+                  Plot > 400 ~ 4,
+                )) %>%
+  gather(Location.K, K_pct, 
+                A1.Kpct, O2.Kpct, S1.Kpct, W1.Kpct) %>%
+  separate(Location.K, 
+          into = c("Location","Kname")) %>%
+  dplyr::select(Location, Rep, Krate_kgha, K_pct)
+
+soyk_w
+```
+
+```{r Checking if same as without pipe}
+# Same result?
+identical(soyk_6, soyk_w)
+```
+
+```{r Saving to file for further analysis}
+write.xlsx(soyk_w,
+           "../data/SoybeanWorkshopProcessed.xlsx")
+
+```
+
+# 3) Exercise  
+Starting from soyk, use data wrangling functions in a pipe workflow to generate the average K_pct for each K rate (in kg/ha) within each location (basically, averaging over reps).
+
+Tip: the final data frame will have 16 rows.
+
+
+
+

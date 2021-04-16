@@ -1,0 +1,15 @@
+"0","soyk_reg_all %>%
+  unnest(augstd) %>%
+  ggplot(aes(x=Krate_kgha, y=K_pct, color=Location))+
+  geom_point(aes(shape=Location), size=2, alpha=.6)+
+  #facet_wrap(.~Location)+
+  geom_line(aes(y=.fixed, linetype=Location), size=1)+
+  labs(x=""K Rate (kg K2O/ha)"", y=""Plant K (%)"")+
+  theme_solarized_2()+
+  scale_color_tableau()+
+  theme(legend.position = ""bottom"")+
+  ggsave(""../output/Regression.png"", width = 5, height = 4)
+"
+"2","Unequal factor levels: coercing to character"
+"2","binding character and factor vector, coercing into character vector"
+"2","binding character and factor vector, coercing into character vector"

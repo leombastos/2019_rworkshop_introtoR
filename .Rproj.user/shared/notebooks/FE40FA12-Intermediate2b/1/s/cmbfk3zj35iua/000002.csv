@@ -1,0 +1,5 @@
+"0","# Running model
+soyk_mod <- lmer(K_pct ~ Location*fKrate_kgha + (1|Location/fRep),
+                 data = soyk_w)
+"
+"2"," Hessian is numerically singular: parameters are not uniquely determined"

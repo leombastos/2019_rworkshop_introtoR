@@ -1,0 +1,6 @@
+"0","randeff_Rep<- ranef(soyk_mod)[[2]] "
+"0",""
+"0","ggplot(randeff_Rep, aes(sample=`(Intercept)`))+"
+"0","  stat_qq()+"
+"0","  stat_qq_line()"
+"0",""

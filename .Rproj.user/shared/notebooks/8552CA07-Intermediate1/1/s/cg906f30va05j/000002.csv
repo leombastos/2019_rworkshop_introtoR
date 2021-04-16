@@ -1,0 +1,4 @@
+"0","soyk_6 <- dplyr::select(soyk_5, "
+"0","                 Location, Rep, Krate_kgha, K_pct)"
+"0",""
+"0","soyk_6"

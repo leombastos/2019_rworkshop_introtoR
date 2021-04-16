@@ -1,0 +1,3 @@
+"0","ggplot(soyk_mod_aug, aes(sample=.stdresid))+"
+"0","  stat_qq()+"
+"0","  stat_qq_line()"

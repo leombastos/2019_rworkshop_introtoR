@@ -1,0 +1,8 @@
+"0","soyk_3<- mutate(soyk_2,"
+"0","                Rep=case_when("
+"0","                  Plot > 100 & Plot < 200 ~ 1,"
+"0","                  Plot > 200 & Plot < 300 ~ 2,"
+"0","                  Plot > 300 & Plot < 400 ~ 3,"
+"0","                  Plot > 400 ~ 4,"
+"0","                ))"
+"0","soyk_3"

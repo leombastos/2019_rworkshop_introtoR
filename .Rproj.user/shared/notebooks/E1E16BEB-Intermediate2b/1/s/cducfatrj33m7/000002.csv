@@ -1,0 +1,12 @@
+"0","```r
+# Loading packages (everytime you open R)
+library(tidyverse) # plotting and wrangling functions
+library(readxl) # to read data from an excel file
+library(lme4) # for mixed models
+library(car) # Anova
+library(broom.mixed) # model diagnostics
+library(emmeans) # Anova means
+library(multcomp) # pairwise comparisons
+library(ggthemes) # ggplot customization
+
+```"

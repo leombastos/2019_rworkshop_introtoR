@@ -1,0 +1,14 @@
+"0","```r
+knitr::opts_chunk$set(out.width = 3, out.height = 2, fig.align = \"center\")
+
+# Loading packages (everytime you open R)
+library(tidyverse) # plotting and wrangling functions
+library(readxl) # to read data from an excel file
+library(lme4) # for mixed models
+library(car) # Anova
+library(broom) # model diagnostics
+library(emmeans) # Anova means
+library(multcomp) # pairwise comparisons
+library(ggthemes) # ggplot customization
+
+```"

@@ -1,0 +1,8 @@
+"0","# Changing type of matrix restriction"
+"0","options(contrasts = c(""contr.sum"", ""contr.poly""))"
+"0",""
+"0","# Running model"
+"0","soyk_mod<- lmer(K_pct ~ (1|Location/fRep) +"
+"0","                  Location*fKrate_kgha,"
+"0","                data=soyk_w)"
+"2"," Hessian is numerically singular: parameters are not uniquely determined"

@@ -1,0 +1,26 @@
+"0","```r
+summary(soyk)
+
+```"
+"1","      Plot            TRT          Stage          
+ Min.   :102.0   Min.   :1.00   Length:16         
+ 1st Qu.:177.2   1st Qu.:1.75   Class :character  
+ Median :255.5   Median :3.00   Mode  :character  
+ Mean   :254.1   Mean   :3.00                     
+ 3rd Qu.:330.5   3rd Qu.:4.25                     
+ Max.   :407.0   Max.   :5.00                     
+   Krate_lbac       A1.Kpct         O2.Kpct     
+ Min.   :  0.0   Min.   :2.480   Min.   :1.140  
+ 1st Qu.: 37.5   1st Qu.:2.737   1st Qu.:1.265  
+ Median : 75.0   Median :2.810   Median :1.405  
+ Mean   : 75.0   Mean   :2.825   Mean   :1.446  
+ 3rd Qu.:112.5   3rd Qu.:2.942   3rd Qu.:1.570  
+ Max.   :150.0   Max.   :3.170   Max.   :1.940  
+    S1.Kpct         W1.Kpct     
+ Min.   :2.900   Min.   :0.740  
+ 1st Qu.:3.087   1st Qu.:1.050  
+ Median :3.145   Median :1.250  
+ Mean   :3.147   Mean   :1.312  
+ 3rd Qu.:3.217   3rd Qu.:1.575  
+ Max.   :3.350   Max.   :1.980  
+"

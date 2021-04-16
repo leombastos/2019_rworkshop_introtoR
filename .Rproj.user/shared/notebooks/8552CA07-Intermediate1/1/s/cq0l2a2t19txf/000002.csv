@@ -1,0 +1,7 @@
+"0","```r
+# Loading packages (everytime you open R)
+library(tidyverse)
+library(readxl)
+library(openxlsx)
+
+```"

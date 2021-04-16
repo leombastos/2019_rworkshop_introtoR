@@ -1,0 +1,4 @@
+"0","soyk<- read_excel(""../data/SoybeanWorkshop.xlsx"", sheet=""R"")"
+"0",""
+"0","# Checking first rows"
+"0","soyk"

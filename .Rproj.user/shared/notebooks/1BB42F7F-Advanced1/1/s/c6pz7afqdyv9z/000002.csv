@@ -1,0 +1,6 @@
+"0","soyk_reg_S1<- lmer(K_pct ~ (1|fRep) +
+                     Krate_kgha,
+                   data=soyk_w_S1)
+"
+"2","boundary (singular) fit: see ?isSingular
+"

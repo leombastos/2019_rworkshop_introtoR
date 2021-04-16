@@ -1,0 +1,8 @@
+"0","soyk_pwc_LocRate<- cld(soyk_means_LocRate, "
+"0","                       adjust=""none"","
+"0","                       Letters=letters,"
+"0","                       reversed=T)"
+"0",""
+"0","soyk_pwc_LocRate<- as.data.frame(soyk_pwc_LocRate)"
+"0",""
+"0","soyk_pwc_LocRate"

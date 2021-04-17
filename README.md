@@ -1,4 +1,4 @@
-# Introduction to R Workshop. 
+# Introduction to R Workshop 
 
 Hey there!  
 
